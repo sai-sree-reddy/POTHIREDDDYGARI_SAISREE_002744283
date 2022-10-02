@@ -11,15 +11,25 @@ package model;
 public class Person {
  
     private String name;
-    private String employeeid;
-    private String age;
+    private int employeeid;
+    private int age;
     private String gender;
     private String Startdate;
-    private String level;
+    private int level;
     private String teaminfo;
     private String positiontitle;
-    private String cellphonenumber;
+    private int cellphonenumber;
     private String emailaddress;
+    
+
+    public String getImagepath() {
+        return imagepath;
+    }
+
+    public void setImagepath(String imagepath) {
+        this.imagepath = imagepath;
+    }
+    private String imagepath;
     //image -->Datatype
 
     public String getName() {
@@ -30,19 +40,19 @@ public class Person {
         this.name = name;
     }
 
-    public String getEmployeeid() {
+    public int getEmployeeid() {
         return employeeid;
     }
 
-    public void setEmployeeid(String employeeid) {
+    public void setEmployeeid(int employeeid) {
         this.employeeid = employeeid;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -62,11 +72,11 @@ public class Person {
         this.Startdate = Startdate;
     }
 
-    public String getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public void setLevel(String level) {
+    public void setLevel(int level) {
         this.level = level;
     }
 
@@ -86,11 +96,11 @@ public class Person {
         this.positiontitle = positiontitle;
     }
 
-    public String getCellphonenumber() {
+    public int getCellphonenumber() {
         return cellphonenumber;
     }
 
-    public void setCellphonenumber(String cellphonenumber) {
+    public void setCellphonenumber(int cellphonenumber) {
         this.cellphonenumber = cellphonenumber;
     }
 
