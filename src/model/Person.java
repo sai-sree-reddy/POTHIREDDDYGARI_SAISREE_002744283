@@ -102,6 +102,10 @@ public class Person {
         this.emailaddress = emailaddress;
     }
     
+    @Override
+    public String toString(){
+        return name;
+    }
     //image setter getter 
     
 }

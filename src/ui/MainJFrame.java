@@ -5,6 +5,7 @@
 package ui;
 
 
+import model.EmployeeHistory;
 import model.Person;
 
 /**
@@ -18,12 +19,15 @@ public class MainJFrame extends javax.swing.JFrame {
      */
     
     Person person;
+    EmployeeHistory employeeHistory;
     
     
     public MainJFrame() {
         initComponents();
         
-        person=new Person();
+         person=new Person();
+        employeeHistory =new EmployeeHistory();
+        
     }
 
     /**
@@ -39,6 +43,7 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPannel = new javax.swing.JPanel();
         btnCreate = new javax.swing.JButton();
         btnView = new javax.swing.JButton();
+        Update = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,6 +62,13 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        Update.setText("Update");
+        Update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdateActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlPannelLayout = new javax.swing.GroupLayout(controlPannel);
         controlPannel.setLayout(controlPannelLayout);
         controlPannelLayout.setHorizontalGroup(
@@ -65,7 +77,8 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(controlPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Update, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         controlPannelLayout.setVerticalGroup(
@@ -75,7 +88,9 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnCreate)
                 .addGap(27, 27, 27)
                 .addComponent(btnView)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(Update)
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(controlPannel);
@@ -110,18 +125,23 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
-        CreateJPanel createJPanel= new CreateJPanel(person);
+        CreateJPanel createJPanel= new CreateJPanel(employeeHistory);
 
         SplitPane.setRightComponent(createJPanel);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
-         ViewPanel viewPanel= new ViewPanel(person);
+        ViewJPanel viewPanel= new ViewJPanel(employeeHistory);
 
         SplitPane.setRightComponent(viewPanel);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnViewActionPerformed
+
+    private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UpdateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,6 +180,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSplitPane SplitPane;
+    private javax.swing.JButton Update;
     private javax.swing.JButton btnCreate;
     private javax.swing.JButton btnView;
     private javax.swing.JPanel controlPannel;
