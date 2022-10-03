@@ -416,6 +416,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtName.setText("");
         txtpositiontitle.setText("");
         txtteaminfo.setText("");
+        startdate.setText("");
       }
       
         /*
