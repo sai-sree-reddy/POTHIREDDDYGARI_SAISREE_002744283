@@ -541,24 +541,24 @@ JTextField myField = new JTextField("Default Text");
 
         // TODO add your handling code here:
     }//GEN-LAST:event_numageMouseClicked
-/*
+
     private void txtmailaddressMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtmailaddressMouseClicked
         
 //ptionPane.showMessageDialog(this, "email should be in format abc@gmail.com");// TODO add your handling code here:
     }//GEN-LAST:event_txtmailaddressMouseClicked
 
     private void numcontactMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_numcontactMouseClicked
-      if(numcontact.getText().isEmpty()){
-          JOptionPane.showMessageDialog(this, "contact number cannot be empty");// TODO add your handling code here:
+      //if(numcontact.getText().isEmpty()){
+        //  JOptionPane.showMessageDialog(this, "contact number cannot be empty");// TODO add your handling code here:
  
-      }        
+      //}        
 // TODO add your handling code here:
     }//GEN-LAST:event_numcontactMouseClicked
 
     private void txtgenderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtgenderMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_txtgenderMouseClicked
-*/
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel imagelebel;
