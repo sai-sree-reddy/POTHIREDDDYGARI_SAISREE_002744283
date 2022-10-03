@@ -4,6 +4,8 @@
  */
 package model;
 
+import javax.swing.Icon;
+
 /**
  *
  * @author Sonureddy
@@ -18,8 +20,17 @@ public class Person {
     private int level;
     private String teaminfo;
     private String positiontitle;
-    private int cellphonenumber;
+    private double cellphonenumber;
     private String emailaddress;
+    private Icon image;
+
+    public Icon getImage() {
+        return image;
+    }
+
+    public void setImage(Icon image) {
+        this.image = image;
+    }
     
 
     public String getImagepath() {
@@ -96,11 +107,11 @@ public class Person {
         this.positiontitle = positiontitle;
     }
 
-    public int getCellphonenumber() {
+    public double getCellphonenumber() {
         return cellphonenumber;
     }
 
-    public void setCellphonenumber(int cellphonenumber) {
+    public void setCellphonenumber(double cellphonenumber) {
         this.cellphonenumber = cellphonenumber;
     }
 
