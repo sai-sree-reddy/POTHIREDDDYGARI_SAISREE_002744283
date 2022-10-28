@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -14,14 +14,10 @@ public class Person {
     private String fullName;
     private House residence;
     private String gender;
-    private Date dob;
+    private String dob;
     private int id;
 
-    public Person(String fullName,
-            House residence,
-            String gender,
-            Date dob,
-            int id) {
+    public Person(String fullName, House residence, String gender, String dob, int id) {
 
         this.fullName = fullName;
         this.residence = residence;
@@ -29,6 +25,10 @@ public class Person {
         this.dob = dob;
         this.id = id;
 
+    }
+
+    public Person() {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public String getFullName() {
@@ -55,11 +55,11 @@ public class Person {
         this.gender = gender;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 
