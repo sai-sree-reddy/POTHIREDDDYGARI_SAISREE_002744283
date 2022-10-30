@@ -15,6 +15,7 @@ public class PatientLogin extends javax.swing.JPanel {
      */
     public PatientLogin() {
         initComponents();
+        // labIMage.setIcon(setIcon( ""C:\Users\Sonur\Desktop\hsptlimage.webp"));
     }
 
     /**

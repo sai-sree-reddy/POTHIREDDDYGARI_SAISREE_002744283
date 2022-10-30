@@ -25,7 +25,7 @@ import javax.swing.table.DefaultTableModel;
  */
 /**
  *
- * @author Jubin Kamdar
+ * @author Sonur
  */
 public class DoctorDiagnoseScreen extends javax.swing.JFrame {
     ArrayList<Doctor> docdetail = DoctorDirectory.arrayReturn();

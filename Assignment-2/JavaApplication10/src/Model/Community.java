@@ -1,15 +1,14 @@
+package Model;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
-
-import java.util.ArrayList;
 
 /**
  *
  * @author Sonur
  */
+
 public class Community {
 
     public int getId() {
@@ -91,7 +90,7 @@ public class Community {
     public void setAdminId(int adminId) {
         this.adminId = adminId;
     }
-     public int id;
+    public int id;
     public String name;
     public String email;
     public String contact;
@@ -114,5 +113,7 @@ public class Community {
         this.password = password;
         this.adminId = adminId;
     }
+
     
+
 }
