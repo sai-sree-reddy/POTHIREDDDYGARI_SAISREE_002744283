@@ -29,6 +29,25 @@ public class Doctor {
     }
     private String Doctorname;
     private int Doctorid;
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
+        this.community = community;
+    }
+
+    public String getGender() {
+        return Gender;
+    }
+
+    public void setGender(String Gender) {
+        this.Gender = Gender;
+    }
+    private String community;
+    private String Gender;
+    
     
     
 }

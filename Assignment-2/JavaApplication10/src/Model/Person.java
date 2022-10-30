@@ -16,6 +16,71 @@ public class Person {
     private String gender;
     private String dob;
     private int id;
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAptNo() {
+        return aptNo;
+    }
+
+    public void setAptNo(String aptNo) {
+        this.aptNo = aptNo;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
+        this.community = community;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getPin() {
+        return pin;
+    }
+
+    public void setPin(int pin) {
+        this.pin = pin;
+    }
+    private String address;
+    private String aptNo;
+    private String state;
+    private String community;
+    private String city;
+    private int pin;
+     
+   
 
     public Person(String fullName, House residence, String gender, String dob, int id) {
 

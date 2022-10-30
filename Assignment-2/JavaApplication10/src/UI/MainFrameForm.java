@@ -14,24 +14,14 @@ import javax.swing.JOptionPane;
  */
 public class MainFrameForm extends javax.swing.JFrame {
 
-    ImageIcon myImage;
-    
-    public ImageIcon setIcon(String m) {
-        if (m != null) {
-            myImage = new ImageIcon(m);
-        } 
-        Image img1 = myImage.getImage();
-        Image img2 = img1.getScaledInstance(442, 266, Image.SCALE_SMOOTH);
-        ImageIcon i = new ImageIcon(img2);
-        return i;
-
-    }
+ 
     /**
      * Creates new form MainFrame
      */
     public MainFrameForm() {
         
         initComponents();
+        
         
         
     }
@@ -46,76 +36,51 @@ public class MainFrameForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txtUsername = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         labImage = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JPasswordField();
-        Doctorlogin = new javax.swing.JButton();
-        PatientLogin = new javax.swing.JButton();
-        SystemAdministratorlogin = new javax.swing.JButton();
-        CommunityAdminlogin = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        Doctor = new javax.swing.JButton();
+        systemadmin = new javax.swing.JButton();
+        Communityadmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel1.setText("Username:");
+        labImage.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel2.setText("Password");
-
-        Doctorlogin.setText("Doctor");
-        Doctorlogin.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Patient ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DoctorloginActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        PatientLogin.setText("Patient");
-        PatientLogin.addActionListener(new java.awt.event.ActionListener() {
+        Doctor.setText("Doctor");
+        Doctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PatientLoginActionPerformed(evt);
+                DoctorActionPerformed(evt);
             }
         });
 
-        SystemAdministratorlogin.setText("SystemAdministrator");
-        SystemAdministratorlogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SystemAdministratorloginActionPerformed(evt);
-            }
-        });
+        systemadmin.setText("System Admin");
 
-        CommunityAdminlogin.setText("CommunityAdmin");
+        Communityadmin.setText("Community Admin");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(PatientLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Doctorlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(SystemAdministratorlogin)
-                            .addComponent(CommunityAdminlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(215, 215, 215)
-                        .addComponent(labImage, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(219, 219, 219)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(1, 1, 1)
-                                        .addComponent(jLabel2))))
-                            .addComponent(txtPassword))))
+                .addGap(50, 50, 50)
+                .addComponent(jButton1)
+                .addGap(45, 45, 45)
+                .addComponent(Doctor, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addComponent(systemadmin, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addComponent(Communityadmin, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labImage, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -124,25 +89,19 @@ public class MainFrameForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
-                        .addComponent(labImage, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labImage, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(PatientLogin)
-                        .addGap(56, 56, 56)
-                        .addComponent(Doctorlogin)
-                        .addGap(31, 31, 31)
-                        .addComponent(SystemAdministratorlogin)
-                        .addGap(38, 38, 38)
-                        .addComponent(CommunityAdminlogin)))
-                .addContainerGap(142, Short.MAX_VALUE))
+                        .addGap(234, 234, 234)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(234, 234, 234)
+                        .addComponent(Doctor))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(235, 235, 235)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(systemadmin)
+                            .addComponent(Communityadmin))))
+                .addContainerGap(281, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -159,42 +118,21 @@ public class MainFrameForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void DoctorloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorloginActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
-        if( txtUsername.getText().matches("singh.niki") && txtPassword.getText().matches("test123")){
-            
-           // DoctorsScreen  patient = new DoctorsScreen();
-            //patient.setVisible(true);
-            
-        }else{
-            JOptionPane.showMessageDialog(this, "Incorrect credential");
-        }
-    }//GEN-LAST:event_DoctorloginActionPerformed
 
-    private void PatientLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PatientLoginActionPerformed
-        // TODO add your handling code here:
-         
-        if( txtUsername.getText().matches("singh.niki") && txtPassword.getText().matches("test123")){
             MedSystemFrame patient = new MedSystemFrame();
             patient.setVisible(true);
-            
-        }else{
-            JOptionPane.showMessageDialog(this, "Incorrect credential");
-        }
-    }//GEN-LAST:event_PatientLoginActionPerformed
 
-    private void SystemAdministratorloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SystemAdministratorloginActionPerformed
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorActionPerformed
         // TODO add your handling code here:
-         if( txtUsername.getText().matches("singh.niki") && txtPassword.getText().matches("test123")){
+        Doctorpanel dpl=new Doctorpanel();
+        dpl.setVisible(true);
             
-            SystemAdmin  patient = new SystemAdmin();
-            patient.setVisible(true);
-            
-        }else{
-            JOptionPane.showMessageDialog(this, "Incorrect credential");
-        }
-    }//GEN-LAST:event_SystemAdministratorloginActionPerformed
+    }//GEN-LAST:event_DoctorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,8 +161,6 @@ public class MainFrameForm extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -235,15 +171,11 @@ public class MainFrameForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CommunityAdminlogin;
-    private javax.swing.JButton Doctorlogin;
-    private javax.swing.JButton PatientLogin;
-    private javax.swing.JButton SystemAdministratorlogin;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton Communityadmin;
+    private javax.swing.JButton Doctor;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labImage;
-    private javax.swing.JPasswordField txtPassword;
-    private javax.swing.JTextField txtUsername;
+    private javax.swing.JButton systemadmin;
     // End of variables declaration//GEN-END:variables
 }

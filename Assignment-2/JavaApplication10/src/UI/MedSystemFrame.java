@@ -32,34 +32,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
         initComponents();
          ms = new MedSystem();
         
-         /*
-        String filepath = "/C:/Users/nikit/Downloads/aed1.txt";
-        File file = new File(filepath);
-        try {
-            FileReader fr = new FileReader(file);
-            BufferedReader br = new BufferedReader(fr);
-
-            Object[] lines = br.lines().toArray();
-
-            for (int m = 0; m < lines.length; m++) {
-                String[] row = lines[m].toString().split(" ");
-                Date resultdate = new Date(System.currentTimeMillis());//row[7]
-
-                Person p= new Person(row[0]+row[1],new House(row[2], row[3], row[4],new Community(row[13]), new City(row[5]), Integer.parseInt(row[6])), row[7], new Date(row[8]),Integer.valueOf(row[9]));
-                
-                VitalSigns vs = new VitalSigns(Integer.valueOf(row[10]) , Integer.valueOf(row[11]), Integer.valueOf(row[12]));
-                Encounter enc = new Encounter(vs , resultdate, "Fever");
-                
-                Patient pat = new Patient(p.getFullName(), p.getResidence(), p.getGender(), p.getDob(), p.getId(), enc);
-                ms.addPatient(pat);
-                ms.addPerson(p);
-                
-            }
-        } catch (FileNotFoundException ex) {
-            System.out.println("no file found");
-        }
         
-       */ 
     }
 
     /**
@@ -88,7 +61,7 @@ public class MedSystemFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Doctors Information");
+        jButton2.setText("Login Patient");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -100,21 +73,20 @@ public class MedSystemFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addComponent(Registeringpatient, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                    .addComponent(Registeringpatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(151, 151, 151)
+                .addGap(170, 170, 170)
                 .addComponent(Registeringpatient)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
-                .addContainerGap(381, Short.MAX_VALUE))
+                .addContainerGap(362, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -153,13 +125,16 @@ public class MedSystemFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
        //        jSplitPane1.setRightComponent(view);
+       PatientLogin ol=new PatientLogin();
+        jSplitPane1.setRightComponent(ol);
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void RegisteringpatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisteringpatientActionPerformed
         // TODO add your handling code here:
         //Person Details;
-         PersonScreen view = new PersonScreen(ms);
-        jSplitPane1.setRightComponent(view);
+        RegisterPatients rp=new RegisterPatients(ms);
+        jSplitPane1.setRightComponent(rp);
     }//GEN-LAST:event_RegisteringpatientActionPerformed
    
 

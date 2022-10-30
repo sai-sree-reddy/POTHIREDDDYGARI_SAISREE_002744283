@@ -12,27 +12,23 @@ public class House {
      private String address;
     private String aptNo;
     private String state;
-    private Community community;
-    private City city;
+    private String community;
+    private String city;
     private int pin;
     
-    public House(String add, String apt, String st, Community community,City c, int pin){
+    public House(String add, String apt){
         
         
         this.address = add;
         this.aptNo = apt;
-        this.state = st;
-        this.city = c;
-        this.community = community;
-        this.pin = pin;
-        System.out.println("house"+this.address + this.aptNo);
+        //System.out.println("house"+this.address + this.aptNo);
     }
 
-    public Community getCommunity() {
+    public String getCommunity() {
         return community;
     }
 
-    public void setCommunity(Community community) {
+    public void setCommunity(String community) {
         this.community = community;
     }
 
@@ -60,11 +56,11 @@ public class House {
         this.state = state;
     }
 
-    public City getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(City city) {
+    public void setCity(String city) {
         this.city = city;
     }
 
