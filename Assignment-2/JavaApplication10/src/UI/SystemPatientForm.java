@@ -306,7 +306,7 @@ public class SystemPatientForm extends javax.swing.JPanel {
         + "(?=\\S+$).{8,20}$";
         boolean patientExists = false;
         //check if user exists
-        for (Patients patient : PatientDirectory.arrayReturn()) {
+        for (Patients patient : PatientDirectory.arrayValueReturn()) {
             if (patient.email.equals(email)) {
                 patientExists = true;
             } else {
@@ -338,8 +338,8 @@ public class SystemPatientForm extends javax.swing.JPanel {
             } else {
                 //when all conditions are false
                 int patientAgeC = Integer.parseInt(age);
-                PatientDirectory.addArrayListItem(PatientDirectory.arrayListLength() + 1, fullName, email, contact, gender, patientAgeC, community, password);
-                System.out.println(PatientDirectory.arrayReturn());
+                PatientDirectory.addItems(PatientDirectory.arrayListLength() + 1, fullName, email, contact, gender, patientAgeC, community, password);
+                System.out.println(PatientDirectory.arrayValueReturn());
                 patientid.setText(String.valueOf(PatientDirectory.arrayListLength()));
                 Patientname.setText("");
                 Patientemail.setText("");

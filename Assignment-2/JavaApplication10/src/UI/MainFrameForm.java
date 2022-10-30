@@ -135,8 +135,9 @@ pl.setVisible(true);
 
     private void DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorActionPerformed
         // TODO add your handling code here:
-        Doctorpanel dpl=new Doctorpanel();
-        dpl.setVisible(true);
+        DoctorDiagnoseScreen dds=new DoctorDiagnoseScreen();
+        //Doctorpanel dpl=new Doctorpanel();
+        dds.setVisible(true);
             
     }//GEN-LAST:event_DoctorActionPerformed
 

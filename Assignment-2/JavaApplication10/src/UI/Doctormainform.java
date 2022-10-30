@@ -6,22 +6,24 @@ package UI;
 
 import Model.House;
 import Model.PatientHistory;
+import Model.Patients;
 import Model.Person;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Sonur
  */
-public class ViewPatients extends javax.swing.JPanel {
+public class Doctormainform extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewPatients
+     * Creates new form Doctormainform
      */
     PatientHistory info;
-    public ViewPatients() {
+    public Doctormainform() {
         initComponents();
-        //populatetable();
+        populatetable();
         this.info=info;
         
     }
@@ -59,16 +61,17 @@ public class ViewPatients extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         doctrid = new javax.swing.JTextField();
+        View = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "Gender", "Age", "Community", "Full Name", "EncounterID"
+                "Patient ID", "Gender", "Age", "Community", "Full Name"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -82,6 +85,12 @@ public class ViewPatients extends javax.swing.JPanel {
         jLabel4.setText("Temperature");
 
         patientid.setText("Patient ID");
+
+        id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Weight");
 
@@ -97,6 +106,13 @@ public class ViewPatients extends javax.swing.JPanel {
 
         jLabel8.setText("DoctorID");
 
+        View.setText("View");
+        View.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -107,18 +123,21 @@ public class ViewPatients extends javax.swing.JPanel {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(patientid)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(34, 34, 34)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(bp)
-                            .addComponent(id)
-                            .addComponent(pulsevalue)
-                            .addComponent(jTextField1)
-                            .addComponent(tremp, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(patientid)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4))
+                                .addGap(34, 34, 34)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(bp)
+                                    .addComponent(id)
+                                    .addComponent(pulsevalue)
+                                    .addComponent(jTextField1)
+                                    .addComponent(tremp, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)))
+                            .addComponent(View))
                         .addGap(76, 76, 76)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -183,15 +202,16 @@ public class ViewPatients extends javax.swing.JPanel {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(tremp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(View)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 16, Short.MAX_VALUE)
+                        .addGap(0, 28, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
                             .addComponent(doctrid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -220,8 +240,27 @@ public class ViewPatients extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void ViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewActionPerformed
+        // TODO add your handling code here:
+         int selectedRowIndex=jTable1.getSelectedRow();
+               if(selectedRowIndex<0){
+               JOptionPane.showMessageDialog(this, "Please select a row to view");
+               return;
+        }
+        
+                DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
+                Patients selectedPatient=(Patients) model.getValueAt(selectedRowIndex,0 );
+                id.setText(String.valueOf(selectedPatient.getId()));
+                
+    }//GEN-LAST:event_ViewActionPerformed
+
+    private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton View;
     private javax.swing.JTextField bp;
     private javax.swing.JTextField doctrid;
     private javax.swing.JTextField entrydate;
@@ -247,6 +286,32 @@ public class ViewPatients extends javax.swing.JPanel {
     private javax.swing.JTextField tremp;
     private javax.swing.JTextField weight;
     // End of variables declaration//GEN-END:variables
+
+    private void populatetable() {
+        
+             
+        DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
+        /*
+        model.setRowCount(0);
+        for (Patients ps : info.getInfo()){
+            Object[] row= new Object[6];
+            row[0]=ps.getId();
+            row[1]=ps..getEmployeeId();
+            row[2]=ed.getAge();
+            row[3]=ed.getGender();
+            row[4]=ed.getStartDate();
+            row[5]=ed.getLevel();
+            row[6]=ed.getTeamInfo();
+            row[7]=ed.getPositionTitle();
+            row[8]=ed.getCellPhoneNumber();
+            row[9]=ed.getEmailAddress();
+            
+            model.addRow(row);
+            
+        }
+        
+        */
+    }
 
     
         

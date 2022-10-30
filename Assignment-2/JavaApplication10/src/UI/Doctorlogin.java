@@ -103,7 +103,7 @@ public class Doctorlogin extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         
-         ViewPatients dfi=new ViewPatients();
+         Doctormainform dfi=new Doctormainform();
         dfi.setVisible(true);
     }//GEN-LAST:event_dctrloginActionPerformed
 
