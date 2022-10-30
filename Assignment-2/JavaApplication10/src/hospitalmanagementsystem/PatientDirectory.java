@@ -4,8 +4,8 @@
  */
 package hospitalmanagementsystem;
 
-import Model.Encounter;
-import Model.Patient;
+import Model.Encounters;
+import Model.Patients;
 import java.util.ArrayList;
 
 /**
@@ -13,39 +13,31 @@ import java.util.ArrayList;
  * @author Sonur
  */
 public class PatientDirectory {
-    private ArrayList<Patient> patients = new ArrayList<>();
+    private static ArrayList<Patients> patientDirectory = new ArrayList<>();
 
-    public void addPatients(Patient patient){
-        patients.add(patient);
-    }
-
-    public ArrayList<Patient> getPatients() {
-        return patients;
-    }
-
-    public void setPatients(ArrayList<Patient> patients) {
-        this.patients = patients;
-    }
-
-    public void encounterPatient(int id, Encounter enc) {
-        
-        for (Patient v : patients) {
-            
-            if (v.getId() == id ) {
-                v.getEncounterHistory().addEncounter(enc);
-                return;
-            }
-        }
-        return;
+    public static void addArrayListItem(int id,String patientName,String patientEmail,String patientContact,String patientGender,int patientAgeC,String patientCommunity,String patientPassword){
+        patientDirectory.add(new Patients(id,patientName,patientEmail,patientContact,patientGender,patientAgeC,patientCommunity,patientPassword));
+        System.out.println(patientDirectory);
     }
     
-    public void deletePatient(int id){
-        for (Patient v : patients) {
-            
-            if (v.getId() == id ) {
-                patients.remove(v);
-                return;
-            }
-        }
+    public static ArrayList<Patients> arrayReturn(){
+        System.out.println("Array list"+patientDirectory);
+        return patientDirectory;
+    }
+    
+    public static int arrayListLength(){
+        return patientDirectory.size();
+    }
+
+    public void addPatients(Patients p) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void encounterPatient(int id, Encounters enc) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void deletePatient(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

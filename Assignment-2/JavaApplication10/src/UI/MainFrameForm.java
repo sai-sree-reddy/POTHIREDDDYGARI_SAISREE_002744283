@@ -63,6 +63,11 @@ public class MainFrameForm extends javax.swing.JFrame {
         });
 
         systemadmin.setText("System Admin");
+        systemadmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                systemadminActionPerformed(evt);
+            }
+        });
 
         Communityadmin.setText("Community Admin");
 
@@ -120,9 +125,10 @@ public class MainFrameForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
-            MedSystemFrame patient = new MedSystemFrame();
-            patient.setVisible(true);
+PatientLogin pl=new PatientLogin();
+pl.setVisible(true);
+            //MedSystemFrame patient = new MedSystemFrame();
+            //patient.setVisible(true);
 
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -133,6 +139,15 @@ public class MainFrameForm extends javax.swing.JFrame {
         dpl.setVisible(true);
             
     }//GEN-LAST:event_DoctorActionPerformed
+
+    private void systemadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_systemadminActionPerformed
+        // TODO add your handling code here:
+        
+        SystemAdminLoginForm sal=new SystemAdminLoginForm();
+        sal.setVisible(true);
+        //SystemMainScreen sms=new SystemMainScreen();
+        //sms.setVisible(true);
+    }//GEN-LAST:event_systemadminActionPerformed
 
     /**
      * @param args the command line arguments

@@ -27,7 +27,7 @@ public class MedSystem {
         personList.addPerson(p);
     }
 
-    public void addPatient(Patient p){
+    public void addPatient(Patients p){
         patientList.addPatients(p);
     }
     
@@ -62,7 +62,7 @@ public class MedSystem {
         return (Person) personList.searchUser(txtId);
     }
 
-    public void encounterPatient(int id, Encounter enc) {
+    public void encounterPatient(int id, Encounters enc) {
         patientList.encounterPatient(id, enc);
     }
 

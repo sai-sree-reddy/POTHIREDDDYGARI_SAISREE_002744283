@@ -82,7 +82,7 @@ public class Person {
      
    
 
-    public Person(String fullName, House residence, String gender, String dob, int id) {
+    public Person(int id, String fullName, String gender, String dob, String community1, String house, String city1) {
 
         this.fullName = fullName;
         this.residence = residence;

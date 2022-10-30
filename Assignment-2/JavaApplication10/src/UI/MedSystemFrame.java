@@ -6,10 +6,9 @@ package UI;
 
 import Model.City;
 import Model.Community;
-import Model.Encounter;
 import Model.House;
 import Model.MedSystem;
-import Model.Patient;
+import Model.Patients;
 import Model.Person;
 import Model.VitalSigns;
 import java.io.BufferedReader;

@@ -4,13 +4,11 @@
  */
 package Model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Sonur
  */
-public class Community {
+public class Patients {
 
     public int getId() {
         return id;
@@ -68,14 +66,6 @@ public class Community {
         this.community = community;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -83,26 +73,16 @@ public class Community {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public int getAdminId() {
-        return adminId;
-    }
-
-    public void setAdminId(int adminId) {
-        this.adminId = adminId;
-    }
-     public int id;
+    public int id;
     public String name;
     public String email;
     public String contact;
     public String gender;
     public int age;
     public String community;
-    public String city;
     public String password;
-    public int adminId;
-
-    public Community(int id, String name, String email, String contact, String gender, int age, String community, String city,  String password, int adminId) {
+    
+    public Patients(int id,String name,String email,String contact,String gender, int age, String community, String password){
         this.id = id;
         this.name = name;
         this.email = email;
@@ -110,9 +90,7 @@ public class Community {
         this.gender = gender;
         this.age = age;
         this.community = community;
-        this.city = city;
         this.password = password;
-        this.adminId = adminId;
     }
     
 }
