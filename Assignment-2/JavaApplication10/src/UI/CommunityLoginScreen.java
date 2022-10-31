@@ -52,6 +52,8 @@ public class CommunityLoginScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+
         Community_Email.setText("Community_Email:");
 
         CommunityPassword.setText("Password:");
@@ -182,7 +184,7 @@ public class CommunityLoginScreen extends javax.swing.JFrame {
         if(loginUser == true){
              JOptionPane.showMessageDialog(this, "Login Successfull", "Warning", JOptionPane.ERROR_MESSAGE);
              CommunityLoginScreen cl = new CommunityLoginScreen();
-             CommunityMainScreen cm = new CommunityMainScreen();
+             CommunityMain cm = new CommunityMain();
              cl.setVisible(false);
              cm.setVisible(true);
              super.dispose();
@@ -202,8 +204,8 @@ public class CommunityLoginScreen extends javax.swing.JFrame {
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         // TODO add your handling code here:
         CommunityLoginScreen cl = new CommunityLoginScreen();
-        //MainLoginScreen ms = new MainLoginScreen();
-        //ms.setVisible(true);
+        MainFrameForm ms = new MainFrameForm();
+        ms.setVisible(true);
         cl.setVisible(false);
         super.dispose();
     }//GEN-LAST:event_BackActionPerformed

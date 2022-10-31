@@ -57,7 +57,7 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
         createReportAddPanel = new javax.swing.JButton();
         viewReportAddPanel = new javax.swing.JButton();
         deleteReport = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        backtomainpg = new javax.swing.JButton();
         Updatepatientdignosis = new javax.swing.JButton();
         parentPanel = new javax.swing.JPanel();
         createReportPanel = new javax.swing.JPanel();
@@ -91,6 +91,8 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         createReportAddPanel.setText("EnterPatient Vitals");
         createReportAddPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,10 +114,10 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        backtomainpg.setText("Back");
+        backtomainpg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                backtomainpgActionPerformed(evt);
             }
         });
 
@@ -126,40 +128,38 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(createReportAddPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(viewReportAddPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(deleteReport)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Updatepatientdignosis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Updatepatientdignosis, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(createReportAddPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                        .addComponent(viewReportAddPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(deleteReport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(15, 15, 15))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(backtomainpg)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(164, 164, 164)
-                .addComponent(createReportAddPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addComponent(createReportAddPanel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(viewReportAddPanel)
-                .addGap(53, 53, 53)
+                .addGap(18, 18, 18)
                 .addComponent(deleteReport)
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addComponent(Updatepatientdignosis)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(113, 113, 113))
+                .addGap(59, 59, 59)
+                .addComponent(backtomainpg)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         parentPanel.setLayout(new java.awt.CardLayout());
 
-        createReportPanel.setBackground(new java.awt.Color(255, 255, 255));
+        createReportPanel.setBackground(new java.awt.Color(255, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -235,11 +235,16 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
         createReportPanel.setLayout(createReportPanelLayout);
         createReportPanelLayout.setHorizontalGroup(
             createReportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, createReportPanelLayout.createSequentialGroup()
+                .addContainerGap(349, Short.MAX_VALUE)
+                .addComponent(AddingReportButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(221, 221, 221))
+            .addGroup(createReportPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(66, 66, 66))
             .addGroup(createReportPanelLayout.createSequentialGroup()
                 .addGroup(createReportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(createReportPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(createReportPanelLayout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addGroup(createReportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -271,29 +276,23 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
                                     .addGroup(createReportPanelLayout.createSequentialGroup()
                                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(temptext, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, createReportPanelLayout.createSequentialGroup()
-                .addGap(0, 349, Short.MAX_VALUE)
-                .addComponent(AddingReportButton, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(213, 213, 213))
-            .addGroup(createReportPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(createReportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(createReportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(createReportPanelLayout.createSequentialGroup()
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(sugarpatient, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(createReportPanelLayout.createSequentialGroup()
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(temptext, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(createReportPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(DoctoID, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(80, 80, 80)
+                        .addGroup(createReportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(createReportPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(createReportPanelLayout.createSequentialGroup()
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(sugarpatient, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(createReportPanelLayout.createSequentialGroup()
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(createReportPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42)
+                                .addComponent(DoctoID, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -341,8 +340,8 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
                     .addComponent(jLabel11)
                     .addComponent(DoctoID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(AddingReportButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(81, 81, 81))
+                .addComponent(AddingReportButton)
+                .addGap(98, 98, 98))
         );
 
         createReportPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel2, patientIdTextField, patientNameTextField});
@@ -463,6 +462,7 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
 
     private void viewReportAddPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewReportAddPanelActionPerformed
         // TODO add your handling code here:
+        /*
         DefaultTableModel tableModel = (DefaultTableModel) reportTable.getModel();
         tableModel.setRowCount(0);
         ArrayList<Diagnosis> diagnosisdirectory = DiagnosisDirectory.arrayReturn();
@@ -488,7 +488,7 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
         parentPanel.repaint();
         parentPanel.revalidate();
 
-
+ */
     }//GEN-LAST:event_viewReportAddPanelActionPerformed
 
 
@@ -617,14 +617,14 @@ public class DoctorDiagnoseScreen extends javax.swing.JFrame {
         */
     }//GEN-LAST:event_delelteSpecificReportActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void backtomainpgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backtomainpgActionPerformed
         // TODO add your handling code here:
         DoctorDiagnoseScreen dd = new DoctorDiagnoseScreen();
         Doctormainform dm = new Doctormainform();
         dd.setVisible(false);
         dm.setVisible(true);
         super.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_backtomainpgActionPerformed
 
     private void pulserateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pulserateActionPerformed
         // TODO add your handling code here:
@@ -699,12 +699,12 @@ public static void main(String args[]) {
     private javax.swing.JButton AddingReportButton;
     private javax.swing.JTextField DoctoID;
     private javax.swing.JButton Updatepatientdignosis;
+    private javax.swing.JButton backtomainpg;
     private javax.swing.JButton createReportAddPanel;
     private javax.swing.JPanel createReportPanel;
     private javax.swing.JButton delelteSpecificReport;
     private javax.swing.JButton deleteReport;
     private javax.swing.JPanel deleteReportPanel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

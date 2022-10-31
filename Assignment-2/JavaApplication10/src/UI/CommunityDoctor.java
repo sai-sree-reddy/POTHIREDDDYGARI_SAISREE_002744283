@@ -43,7 +43,7 @@ public class CommunityDoctor extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 204));
 
-        viewDoctorTable.setBackground(new java.awt.Color(255, 204, 204));
+        viewDoctorTable.setBackground(new java.awt.Color(0, 153, 204));
         viewDoctorTable.setForeground(new java.awt.Color(255, 204, 204));
         viewDoctorTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -58,7 +58,6 @@ public class CommunityDoctor extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(viewDoctorTable);
 
-        bcktomainpage.setBackground(new java.awt.Color(204, 255, 204));
         bcktomainpage.setText("Back");
         bcktomainpage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,7 +71,7 @@ public class CommunityDoctor extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -85,7 +84,7 @@ public class CommunityDoctor extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(bcktomainpage)
-                .addGap(0, 19, Short.MAX_VALUE))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         pack();
@@ -101,7 +100,7 @@ public class CommunityDoctor extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public void update(){
-        String comm = CommunityLogin.admincom;
+        String comm = CommunityLoginScreen.admincom;
         Boolean print = false;
       DefaultTableModel tableModel = (DefaultTableModel) viewDoctorTable.getModel();
         tableModel.setRowCount(0);

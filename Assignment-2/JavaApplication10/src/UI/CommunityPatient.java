@@ -40,7 +40,7 @@ public class CommunityPatient extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        viewPatientTable.setBackground(new java.awt.Color(255, 204, 204));
+        viewPatientTable.setBackground(new java.awt.Color(0, 153, 204));
         viewPatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -72,15 +72,15 @@ public class CommunityPatient extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(225, 225, 225))
+                .addGap(70, 70, 70))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(34, 34, 34)
                 .addComponent(jButton1)
-                .addGap(0, 51, Short.MAX_VALUE))
+                .addGap(0, 44, Short.MAX_VALUE))
         );
 
         pack();
@@ -96,8 +96,8 @@ public class CommunityPatient extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public void update(){
-        String name = CommunityLogin.adminName;
-        String comm = CommunityLogin.admincom;
+        String name = CommunityLoginScreen.adminName;
+        String comm = CommunityLoginScreen.admincom;
         Boolean print = false;
       DefaultTableModel tableModel = (DefaultTableModel) viewPatientTable.getModel();
         tableModel.setRowCount(0);

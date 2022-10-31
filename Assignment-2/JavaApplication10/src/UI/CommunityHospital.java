@@ -26,8 +26,8 @@ public class CommunityHospital extends javax.swing.JFrame {
         initComponents();
         idAdminTextField.setText(String.valueOf(HospitalDirectory.arrayListLength()));
         idTextField1.setText(String.valueOf(HospitalDirectory.arrayListLength()));
-        communityTextField.setText(CommunityLogin.admincom);
-        cmhead.setText(CommunityLogin.adminName);
+        communityTextField.setText(CommunityLoginScreen.admincom);
+        cmhead.setText(CommunityLoginScreen.adminName);
     }
 
     /**
@@ -83,7 +83,7 @@ public class CommunityHospital extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(255, 204, 204));
 
         AddHospitalBtn.setText("Add");
@@ -169,7 +169,7 @@ public class CommunityHospital extends javax.swing.JFrame {
 
         ParentPanel.setLayout(new java.awt.CardLayout());
 
-        AddHospital.setBackground(new java.awt.Color(204, 255, 204));
+        AddHospital.setBackground(new java.awt.Color(0, 153, 204));
         AddHospital.setForeground(new java.awt.Color(255, 204, 204));
 
         idAdminTextField.setEditable(false);
@@ -473,7 +473,7 @@ public class CommunityHospital extends javax.swing.JFrame {
         tableModel.setRowCount(0);
         ArrayList<Hospitals> hospitalDir  = HospitalDirectory.arrayReturn();
         for(int i=0 ; i<HospitalDirectory.arrayListLength();i++){
-            if(CommunityLogin.admincom.equals(hospitalDir.get(i).community)){
+            if(CommunityLoginScreen.admincom.equals(hospitalDir.get(i).community)){
             Object[] rowData = new Object[]{
                 hospitalDir.get(i).id,
                 hospitalDir.get(i).name,
