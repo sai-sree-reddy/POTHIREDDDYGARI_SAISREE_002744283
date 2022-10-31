@@ -94,7 +94,7 @@ public class SystemDoctorForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 153, 255));
 
         AddDoctorButton.setText("Add");
         AddDoctorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +117,7 @@ public class SystemDoctorForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Doctors");
 
@@ -166,8 +167,10 @@ public class SystemDoctorForm extends javax.swing.JFrame {
         CompletePanel.setBackground(new java.awt.Color(255, 255, 255));
         CompletePanel.setLayout(new java.awt.CardLayout());
 
-        AddDoctor.setBackground(new java.awt.Color(255, 255, 255));
+        AddDoctor.setBackground(new java.awt.Color(102, 153, 255));
 
+        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Doctor Registration Form");
 
         jLabel3.setText("Doctor ID:");
@@ -319,7 +322,7 @@ public class SystemDoctorForm extends javax.swing.JFrame {
                     .addComponent(doctorPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(AddNewDoctorButton)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         CompletePanel.add(AddDoctor, "card2");
@@ -353,7 +356,7 @@ public class SystemDoctorForm extends javax.swing.JFrame {
                     .addGroup(DeleteDoctorLayout.createSequentialGroup()
                         .addGap(218, 218, 218)
                         .addComponent(DeleteButton)))
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         DeleteDoctorLayout.setVerticalGroup(
             DeleteDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -68,8 +68,8 @@ public class SystemCommunityForm extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         cityCombo = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         DeleteCommunityAdmin = new javax.swing.JPanel();
         deleteCombo = new javax.swing.JComboBox<>();
         deleteText = new javax.swing.JTextField();
@@ -81,7 +81,7 @@ public class SystemCommunityForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(102, 153, 255));
 
         AddCommunityAdminButton1.setText("Add");
         AddCommunityAdminButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +104,7 @@ public class SystemCommunityForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel10.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Community");
 
@@ -119,7 +120,7 @@ public class SystemCommunityForm extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backButton)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -147,7 +148,7 @@ public class SystemCommunityForm extends javax.swing.JFrame {
 
         CompletePanel.setLayout(new java.awt.CardLayout());
 
-        Communityaddition.setBackground(new java.awt.Color(255, 255, 255));
+        Communityaddition.setBackground(new java.awt.Color(102, 153, 255));
         Communityaddition.setToolTipText("");
 
         jLabel2.setText("ID");
@@ -234,11 +235,13 @@ public class SystemCommunityForm extends javax.swing.JFrame {
 
         jLabel12.setText("City");
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel13.setText("Community Admin");
+        jLabel15.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("COMMUNITY ADMIN");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel14.setText("Community ");
+        jLabel16.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("COMMUNITY");
 
         javax.swing.GroupLayout CommunityadditionLayout = new javax.swing.GroupLayout(Communityaddition);
         Communityaddition.setLayout(CommunityadditionLayout);
@@ -268,9 +271,7 @@ public class SystemCommunityForm extends javax.swing.JFrame {
                                             .addComponent(cityCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(CommunityadditionLayout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addGroup(CommunityadditionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(CommunityadditionLayout.createSequentialGroup()
                                 .addGroup(CommunityadditionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -292,16 +293,21 @@ public class SystemCommunityForm extends javax.swing.JFrame {
                                     .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(idAdminTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(CommunityadditionLayout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CommunityadditionLayout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(320, Short.MAX_VALUE))
         );
         CommunityadditionLayout.setVerticalGroup(
             CommunityadditionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CommunityadditionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel16)
+                .addGap(18, 18, 18)
                 .addGroup(CommunityadditionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -313,8 +319,8 @@ public class SystemCommunityForm extends javax.swing.JFrame {
                 .addGroup(CommunityadditionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cityCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jLabel15)
                 .addGap(18, 18, 18)
                 .addGroup(CommunityadditionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11)
@@ -346,7 +352,7 @@ public class SystemCommunityForm extends javax.swing.JFrame {
                     .addComponent(jLabel9))
                 .addGap(30, 30, 30)
                 .addComponent(AddNewButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
                 .addComponent(addPatientButton)
                 .addContainerGap())
         );
@@ -701,8 +707,8 @@ public class SystemCommunityForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

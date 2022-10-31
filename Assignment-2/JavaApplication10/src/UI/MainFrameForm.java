@@ -14,6 +14,17 @@ import javax.swing.JOptionPane;
  */
 public class MainFrameForm extends javax.swing.JFrame {
 
+     ImageIcon myImage;
+    
+    public ImageIcon setIcon(String m) {
+        if (m != null) {
+            myImage = new ImageIcon(m);
+        } 
+        Image img1 = myImage.getImage();
+        Image img2 = img1.getScaledInstance(300, 308, Image.SCALE_SMOOTH);
+        ImageIcon i = new ImageIcon(img2);
+        return i;
+    }
  
     /**
      * Creates new form MainFrame
@@ -21,7 +32,8 @@ public class MainFrameForm extends javax.swing.JFrame {
     public MainFrameForm() {
         
         initComponents();
-        
+         labelimg.setIcon(setIcon( "/Users/Sonur/Desktop/hsptl.png"));
+         
         
         
     }
@@ -37,21 +49,25 @@ public class MainFrameForm extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         labImage = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        PatientRegister = new javax.swing.JButton();
         Doctor = new javax.swing.JButton();
         systemadmin = new javax.swing.JButton();
         Communityadmin = new javax.swing.JButton();
+        PatientLogin = new javax.swing.JButton();
+        labelimg = new javax.swing.JLabel();
+        hsptladmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel1.setForeground(new java.awt.Color(51, 51, 51));
 
         labImage.setBackground(new java.awt.Color(204, 204, 255));
 
-        jButton1.setText("Patient ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        PatientRegister.setText("Patient Register ");
+        PatientRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                PatientRegisterActionPerformed(evt);
             }
         });
 
@@ -70,86 +86,150 @@ public class MainFrameForm extends javax.swing.JFrame {
         });
 
         Communityadmin.setText("Community Admin");
+        Communityadmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CommunityadminActionPerformed(evt);
+            }
+        });
+
+        PatientLogin.setText("Patient Login");
+        PatientLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PatientLoginActionPerformed(evt);
+            }
+        });
+
+        hsptladmin.setText("Hospital Admin");
+        hsptladmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hsptladminActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(205, 205, 205)
+                .addComponent(labelimg, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(labImage, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(PatientRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
                 .addComponent(Doctor, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(73, 73, 73)
                 .addComponent(systemadmin, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
-                .addComponent(Communityadmin, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labImage, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(71, 71, 71)
+                .addComponent(hsptladmin, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(PatientLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(157, 157, 157)
+                .addComponent(Communityadmin, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labImage, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelimg, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(labImage, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
+                        .addGap(39, 39, 39)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(PatientRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(systemadmin)
-                            .addComponent(Communityadmin)))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addGap(234, 234, 234)
-                            .addComponent(Doctor))))
-                .addContainerGap(268, Short.MAX_VALUE))
+                            .addComponent(hsptladmin)
+                            .addComponent(Doctor))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(PatientLogin)
+                            .addComponent(Communityadmin))
+                        .addGap(103, 103, 103))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 757, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void PatientRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PatientRegisterActionPerformed
         // TODO add your handling code here:
-PatientLogin pl=new PatientLogin();
-pl.setVisible(true);
-            //MedSystemFrame patient = new MedSystemFrame();
-            //patient.setVisible(true);
+        PatientRegistrationScreen prl = new PatientRegistrationScreen();
+        MainFrameForm ms = new MainFrameForm();
+        ms.setVisible(false);
+        prl.setVisible(true);
+        super.dispose();
+        
+
 
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_PatientRegisterActionPerformed
 
     private void DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorActionPerformed
         // TODO add your handling code here:
-        DoctorDiagnoseScreen dds=new DoctorDiagnoseScreen();
-        //Doctorpanel dpl=new Doctorpanel();
-        dds.setVisible(true);
-            
+        DoctorLoginScreen dl = new DoctorLoginScreen();
+        MainFrameForm ms = new MainFrameForm();
+        ms.setVisible(false);
+        dl.setVisible(true);
+        super.dispose();            
     }//GEN-LAST:event_DoctorActionPerformed
 
     private void systemadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_systemadminActionPerformed
         // TODO add your handling code here:
-        
-        SystemAdminLoginForm sal=new SystemAdminLoginForm();
-        sal.setVisible(true);
-        //SystemMainScreen sms=new SystemMainScreen();
-        //sms.setVisible(true);
+        //SystemAdminLogin al=new SystemAdminLogin();
+      SystemMainScreen al = new SystemMainScreen();
+        MainFrameForm ms = new MainFrameForm();
+        ms.setVisible(false);
+        al.setVisible(true);
+        super.dispose();
     }//GEN-LAST:event_systemadminActionPerformed
+
+    private void PatientLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PatientLoginActionPerformed
+        // TODO add your handling code here:
+        PatientLoginScreen pl = new PatientLoginScreen();
+        MainFrameForm ms = new MainFrameForm();
+        ms.setVisible(false);
+        pl.setVisible(true);
+        super.dispose();
+    }//GEN-LAST:event_PatientLoginActionPerformed
+
+    private void CommunityadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CommunityadminActionPerformed
+        // TODO add your handling code here:
+        CommunityLoginScreen clg = new CommunityLoginScreen();
+        MainFrameForm msf = new MainFrameForm();
+        msf.setVisible(false);
+        clg.setVisible(true);
+        super.dispose();
+    }//GEN-LAST:event_CommunityadminActionPerformed
+
+    private void hsptladminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hsptladminActionPerformed
+        // TODO add your handling code here:
+         MainFrameForm ms= new MainFrameForm();
+         HospitalAdminLogin han=new HospitalAdminLogin();
+        ms.setVisible(false);
+        han.setVisible(true);
+        super.dispose();
+    }//GEN-LAST:event_hsptladminActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,9 +270,12 @@ pl.setVisible(true);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Communityadmin;
     private javax.swing.JButton Doctor;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton PatientLogin;
+    private javax.swing.JButton PatientRegister;
+    private javax.swing.JButton hsptladmin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labImage;
+    private javax.swing.JLabel labelimg;
     private javax.swing.JButton systemadmin;
     // End of variables declaration//GEN-END:variables
 }
