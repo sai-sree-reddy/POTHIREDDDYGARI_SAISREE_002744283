@@ -17,12 +17,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Sonur
  */
-public class DoctorAppointmentScreen extends javax.swing.JFrame {
+public class DoctorAppointment extends javax.swing.JFrame {
 
     /**
      * Creates new form DoctorAppointmentScreen
      */
-    public DoctorAppointmentScreen() {
+    public DoctorAppointment() {
         initComponents();
         
     }
@@ -181,7 +181,7 @@ public class DoctorAppointmentScreen extends javax.swing.JFrame {
 
     private void backtomainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backtomainActionPerformed
         // TODO add your handling code here:
-        DoctorAppointmentScreen da = new DoctorAppointmentScreen();
+        DoctorAppointment da = new DoctorAppointment();
         DoctorMainScreen dm = new DoctorMainScreen();
         da.setVisible(false);
         dm.setVisible(true);
@@ -206,20 +206,21 @@ public class DoctorAppointmentScreen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DoctorAppointmentScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorAppointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DoctorAppointmentScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorAppointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DoctorAppointmentScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorAppointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DoctorAppointmentScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorAppointment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DoctorAppointmentScreen().setVisible(true);
+                new DoctorAppointment().setVisible(true);
                 
             }
         });

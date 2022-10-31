@@ -135,7 +135,7 @@ public class DoctorMainScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         DoctorMainScreen dms = new DoctorMainScreen();
-        DoctorAppointmentScreen das = new DoctorAppointmentScreen();
+        DoctorAppointment das = new DoctorAppointment();
         das.tableLoad();
         dms.setVisible(false);
         das.setVisible(true);
