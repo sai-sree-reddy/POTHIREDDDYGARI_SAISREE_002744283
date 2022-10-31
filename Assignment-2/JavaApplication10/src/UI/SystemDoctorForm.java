@@ -94,7 +94,7 @@ public class SystemDoctorForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(102, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         AddDoctorButton.setText("Add");
         AddDoctorButton.addActionListener(new java.awt.event.ActionListener() {

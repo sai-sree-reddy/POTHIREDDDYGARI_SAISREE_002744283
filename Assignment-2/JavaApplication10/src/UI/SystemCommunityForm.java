@@ -81,7 +81,7 @@ public class SystemCommunityForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(102, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         AddCommunityAdminButton1.setText("Add");
         AddCommunityAdminButton1.addActionListener(new java.awt.event.ActionListener() {
